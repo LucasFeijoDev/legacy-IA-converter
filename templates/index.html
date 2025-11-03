@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>LegacyAI Converter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>🧠 LegacyAI Converter</h1>
+    <p>Converta códigos legados para linguagens modernas com apoio de IA generativa.</p>
+
+    <form id="converter-form">
+        <label for="language">Linguagem de destino:</label>
+        <select id="language" name="language">
+            <option value="Python">Python</option>
+            <option value="JavaScript">JavaScript</option>
+        </select>
+
+        <label for="legacy_code">Cole seu código legado:</label>
+        <textarea id="legacy_code" name="legacy_code" placeholder="Exemplo: PRINT 'Olá Mundo'"></textarea>
+
+        <button type="submit">Converter</button>
+    </form>
+
+    <h2>Resultado</h2>
+    <pre id="result"></pre>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
